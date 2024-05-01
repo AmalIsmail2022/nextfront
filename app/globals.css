@@ -2,32 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .container {
+    @apply px-4 mx-auto w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px];
   }
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 1000px;
+}
+.cardys .cardy {
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cardys .cardy1 {
+  display: none;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cardys .price {
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cardys:hover .cardy {
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cardys:hover .cardy1 {
+  display: block;
+  opacity: 1;
+}
+.cardys:hover .price {
+  display: none;
+  opacity: 0;
+}
+.menu {
+  transform: rotatex(-90deg);
+  transform-origin: top;
+  transition: all 0.6s;
+  left: 0;
+  right: 0;
+}
+.menu1 {
+  transform: rotatex(-90deg);
+  transform-origin: top;
+  transition: all 0.6s;
+
+}
+.serv:hover .menu {
+  transform: rotatex(0deg);
+}
+.serv:hover .menu1 {
+  transform: rotatex(0deg);
+}
+.bord {
+border: 2px solid red;
+
+
+}
+.men {
+height:300px;
+
+    /* backdrop-filter: blur(2.5px); */
+    /* background-color: rgba(40, 40, 48, 0.633); */
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.minimenue{
+  display: hidden;
+}
+
+.fixed1 {
+
+    position: fixed;
+    inset: 0;
+    top:80px;
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(40, 40, 48, 0.633) !important;
+    z-index: 8;
 }
