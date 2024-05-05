@@ -58,7 +58,7 @@ function Text() {
             type="text"
             id="Search"
             placeholder="Search for..."
-            className="w-[200px] px-3 md:w-full md:px-2 outline-none py-1.5 md:py-2.5 pe-10 shadow-sm sm:text-sm m-auto "
+            className="w-full px-3  lg:w-[260px] md:w-[225px] outline-none py-1.5 md:py-2.5 pe-10 shadow-sm sm:text-sm m-auto "
           />
 
           <span className="absolute inset-y-0 end-0 grid w-10 place-content-center">
